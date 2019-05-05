@@ -3,16 +3,7 @@
 <head>
   <title>WEB1 - 혈당</title>
   <meta charset="utf-8">
-  <style>
-  a {
-    color:black;
-    text-decoration: none;
-  }
-  h1 {
-    font-size:45px;
-    text-align:center;
-  }
-  </style>
+  <link rel="stylesheet" href="style.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138413467-1"></script>
 <script>
@@ -23,21 +14,26 @@
   gtag('config', 'UA-138413467-1');
 </script>
 <!-- End of Global site tag (gtag.js) - Google Analytics -->
+  <script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">MYDANO NOTE</a></h1>
-  <ul>
-    <li>3F (Fitness, Family, Freedom)</li>
-    <li>DANO COACH</li>
-  </ul>
+<div id="grid">
   <ol>
+  <input type="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
+
     <li><a href="1.html">혈당</a></li>
     <li><a href="2.html">혈당지수(GI)</a></li>
     <li><a href="3.html">다이어리</a></li>
   </ol>
+  <div id="article">
   <h2>다이어리</h2>
   <p>다이어리 내용을 입력한다.
   </p>
+  </div>
+</div>
 <!-- Start of 댓글기능 Script -->
   <p>
     <div id="disqus_thread"></div>

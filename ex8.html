@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+<!--
+배열 안에 들어가 있는 원소들을 element라고 함
+ex) Fitness, Family, Freedom 이런 것들
+ -->
+  <body>
+    <h1>Loop & Array</h1>
+    <script>
+      var dreams = ['Fitness', 'Family', 'Freedom'];
+    </script>
+    <h2>My Dreams</h2>
+    <ul>
+      <script>
+        var i = 0;
+        while(i < dreams.length){
+          document.write('<li><a href="http://a.com/'+dreams[i]+'">'+dreams[i]+'</a></li>');
+          i = i + 1;
+        }
+      </script>
+    </ul>
+  </body>
+</html>

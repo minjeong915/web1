@@ -3,40 +3,61 @@
 <head>
   <title>WEB1 - 혈당</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
 <!--
-css언어 html에서 디자인 기능 가져 뺏어옴, 꾸미기 효과적. html언어에는 디자인에 관련되 코드 없음, 정보에 전념
+  태그 안의 onclick 이라는 속성에는 JS언어가 온다.
+  onclick=""
 
-<style>태그(태그 안에는 css언어 사용)&style속성(이것은 html언어 속 들어가 있는 속성) 비교
-*a는 selector(선택자)
-*color:black는 declaration(선언,효과)
-*color는 property(속성)
-*black은 property value(속성 값)
+  javacript select tag by css selector
+  : document.querySelector('body')
+                        or ('#IDvalue') or (.classvalue)
+  javacript element(property라고 해도 나왔음) style
+  : .style
+  javascript style background-color
+  : .backgroundColor = 'white';
+  ===<body style="background-color:black;">
 
-element(태그)
-
-.saw란 선택자[class선택자] : 이 웹페이지의 모든 class[묶음,그룹]="saw"인 태그를 가르키는 선택자
-#active란 선택자[id선택자] : 이 웹페이지의 모든 id="active"인 태그를 가르키는 선택자
-
-id선택자[#]와 class선택자[.]가 붙으면 id선택자가 이긴다
-
-id선택자의 값이 active인 태그가 이 웹페이지에서 한번만 등장하면 그 다음에 active라고 하는 값은 쓰면 안된다. 즉 id의 값은 단 한번만 등장
+  element의 value 값을 알기 위함
+  javascript element get value
 -->
 
-<!-- <2.html>
-<li><a href="2.html" class="saw active">혈당지수(GI)</a></li>
-class라 하는 속성에 여러개의 속성값이 들어올 수 있고 띄어쓰기로 구분한다.
-하나의 태그에는 여러개의 속성이 들어올 수 있고, 여러개의 선택자를 통해서 하나의 태그를 공동으로 제어할 수 있다.
+<!-- [ex4]
+  비교연산자 '==='
+
+  데이터타입(자료형)
+  : Number, String, Boolean(true, false)
+
+  html에서 태그< 와 혼용이라
+  1&lt2
+  '<' less than
 -->
-  <style>
-  a {
-    color:black;
-    text-decoration: none;
+
+<!--바뀜
+  <input type="button" value="night" onclick="
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  ">
+  <input type="button" value="day" onclick="
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black'
+  ">
+
+  function BodySetColor(color){
+    document.querySelector('body').style.color = color;
   }
-  h1 {
-    font-size:45px;
-    text-align:center;
+  function BodySetBackgroundColor(color){
+    document.querySelector('body').style.backgroundColor = color;
   }
-  </style>
+
+객체의 프로퍼티와 프로퍼티를 구별할 때 ',' 쓴다.
+-->
+
+
+<!--
+  UI(User Interface) 사용자가 시스템을 제어하기 위해서 사용하는 조작장치
+  API(Application Programming Interface)
+-->
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138413467-1"></script>
 <script>
@@ -47,36 +68,26 @@ class라 하는 속성에 여러개의 속성값이 들어올 수 있고 띄어�
   gtag('config', 'UA-138413467-1');
 </script>
 <!-- End of Global site tag (gtag.js) - Google Analytics -->
+  <script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">MYDANO NOTE</a></h1>
-  <ul>
-    <li>3F (Fitness, Family, Freedom)</li>
-    <li>DANO COACH</li>
-  </ul>
+<div id="grid">
   <ol>
+  <input type="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
+
     <li><a href="1.html">혈당</a></li>
     <li><a href="2.html">혈당지수(GI)</a></li>
     <li><a href="3.html">다이어리</a></li>
   </ol>
-<!--(폰트태그 사용)
-  <h1><a href="index.html"><font color="red">MYDANO NOTE</font></a></h1>
-  <ul>
-    <li>3F (Fitness, Family, Freedom</li>
-    <li>DANO COACH</li>
-  </ul>
-  <ol>
-    <li><a href="1.html"><font color="red">혈당</font></a></li>
-    <li><a href="2.html"><font color="red">혈당지수(GI)</font></a></li>
-    <li><a href="3.html"><font color="red">다이어리</font></a></li>
-  </ol>
--->
+  <div id="article">
   <h2>MYDANO NOTE 란?</h2>
   <p>MYDANO NOTE는 <a href="https://www.mydano.net/" target="_blank" title="마이다노" style="color:green;text-decoration:underline">MYDANO</a>를 수강하며 공부한 것과 느낀 것을 기록하는 공간이다.
-<!--
-  style이란 속성을 썼으면 그 속성의 값을 웹브라우저는 css의 문법에 따라 해석해서 해석된 결과를 style속성이 위치하고 있는 이 태그에 적용할 것이다.
--->
   </p>
+  </div>
+</div>
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

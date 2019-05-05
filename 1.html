@@ -3,16 +3,7 @@
 <head>
   <title>WEB1 - 혈당</title>
   <meta charset="utf-8">
-  <style>
-  a {
-    color:black;
-    text-decoration: none;
-  }
-  h1 {
-    font-size:45px;
-    text-align:center;
-  }
-  </style>
+  <link rel="stylesheet" href="style.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138413467-1"></script>
 <script>
@@ -23,22 +14,26 @@
   gtag('config', 'UA-138413467-1');
 </script>
 <!-- End of Global site tag (gtag.js) - Google Analytics -->
+  <script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">MYDANO NOTE</a></h1>
-  <ul>
-    <li>3F (Fitness, Family, Freedom)</li>
-    <li>DANO COACH</li>
-  </ul>
+<div id="grid">
   <ol>
+  <input type="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
     <li><a href="1.html">혈당</a></li>
     <li><a href="2.html">혈당지수(GI)</a></li>
     <li><a href="3.html">다이어리</a></li>
   </ol>
+  <div id="article">
   <h2>혈당</h2>
   <p><a href="https://ko.wikipedia.org/wiki/%ED%98%88%EB%8B%B9" target="_blank" title="혈당 - 위키백과">혈당(血糖, 영어: blood sugar)</a>은 혈액 속에 함유되어 있는 포도당의 농도를 이르는 말이다.<br>인체는 항상성을 유지하기 위해 항상 혈당 수치를 일정한 범위 내로 유지하여야 한다.<br>혈당량을 유지하는 데 기여하는 호르몬은 <u>글루카곤, 아드레날린, 인슐린, 갑상선호르몬</u> 등이 있으며,<br>이 <strong>호르몬들의 <u>길항작용</u>에 따라 인체의 혈당 수치는 항상 약 90mg/dl(=약 0.9g/l) 정도로 유지</strong>된다.<br><br>이러한 호르몬의 분비에 이상이 발생하면 혈당 수치가 불안정해지게 되는데, 이러한 현상의 대표적인 예가 당뇨병이다.<br>당뇨병은 호르몬 중 특히 혈당을 낮추는 인슐린의 분비에 이상이 발생하여 생기는 병으로, 현재는 인슐린을 외부로 투여받으면서 식이요법을 병행하는 방법으로 치료되고 있다.<br><br>
   <img src="healthyfood.jpg" width="30%">
   </p>
+  </div>
+</div>
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

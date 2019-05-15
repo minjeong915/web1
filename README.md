@@ -1,1 +1,1 @@
-# web1(HTML,CSS,Javascript)
+# web1(HTML,CSS,JavaScript)
